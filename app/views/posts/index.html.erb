@@ -2,7 +2,7 @@
 <p>Find me in app/views/posts/index.html.erb</p>
 <hr/>
 <% @posts.each do |p| %>
-<p>Post title: <strong><%= p.title %></strong></p>
-<p>Post body: <strong><%= p.body %></strong></p>
-<hr/>
+    <p><strong><%= p.title %></strong></p>
+    <p><%= p.body %></p>
+    <hr/>
 <% end %>

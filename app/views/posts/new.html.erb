@@ -11,8 +11,10 @@
         <%= f.text_area :body %> <br/>
     </p>
     <p>
-        <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {include_blank:"Select"} %>
+        <%= f.label :category_id %> <br/>
+        <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]} %>
     </p>
+    <br/>
     <p>
         <%= f.submit "Create Post"%>
     </p>

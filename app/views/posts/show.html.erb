@@ -1,2 +1,6 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<p>Posts#show: Find me in app/views/posts/show.html.erb</p>
+<hr/>
+<h1><%= @post.title %></h1>
+<p><small><%= @post.created_at.strftime("%b %d, %Y") %></small></p>
+<p><%= @post.body %></p>
+<p><%= link_to "Edit post", edit_post_path %></p>

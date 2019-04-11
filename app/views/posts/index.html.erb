@@ -4,6 +4,6 @@
 <% @posts.each do |p| %>
     <p><strong><%= link_to p.title, p %></strong></p>
     <p><%= p.body %></p>
-    <hr/>
 <% end %>
+    <hr/>
 <p><%= link_to "Create new post", new_post_path%></p>

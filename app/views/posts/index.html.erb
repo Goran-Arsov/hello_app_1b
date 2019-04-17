@@ -1,9 +1,9 @@
-<h1>Posts#index</h1>
+<h3>Posts#index</h3>
 <p>Find me in app/views/posts/index.html.erb</p>
-<hr/>
 <% @posts.each do |p| %>
     <p><strong><%= link_to p.title, p %></strong></p>
     <p><%= p.body %></p>
 <% end %>
     <hr/>
-<p><%= link_to "Create new post", new_post_path%></p>
+<p><h3><strong><%= link_to "Create new post", new_post_path%></strong></h3></p>
+<br />

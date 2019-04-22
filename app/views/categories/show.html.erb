@@ -3,6 +3,8 @@
 <ul>
 <% @category_posts.each do |cat_post|%>
     <li><%= link_to cat_post.title, cat_post %></li>
+<% end.empty? %>
+    <p>Sorry, there are no posts in this category</p>
 <% end %>
 </ul>
 

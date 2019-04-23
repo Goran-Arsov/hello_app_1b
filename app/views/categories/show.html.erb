@@ -1,13 +1,13 @@
 <p>Categories#show, find me in app/views/categories/show.html.erb</p>
 <p>All existing posts in <strong><%= @category.name %></strong>:</p>
 <% if @category_posts.empty? %>
-        <p><%= "Sorry, there are no posts in this category" %></p> 
-    <% else %>
-        <ul>
+    <p><%= "Sorry, there are no posts in this category" %></p> 
+<% else %>
+    <ul>
         <% @category_posts.each do |cat_post|%>
         <li><%= link_to cat_post.title, cat_post %></li>
         <% end %>
-        </ul>
+    </ul>
 <% end %>
 
 <p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>

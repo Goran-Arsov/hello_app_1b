@@ -9,6 +9,17 @@ class CategoriesController < ApplicationController
   end
 
   def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(permitted_params)
+    if @category.save
+      redirect_to categories_path, :notice => "You just created a new category"
+    else
+      render "new", :notice => "Your category WAS NOT created"
+    end
+    
   end
 
   def edit
@@ -17,10 +28,12 @@ class CategoriesController < ApplicationController
   def update
   end
 
-  def create
-  end
-
   def destroy
   end
   
+  private
+
+  def permitted_params
+    params.require(:category).permit(:name)
+  end
 end

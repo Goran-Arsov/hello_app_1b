@@ -10,14 +10,21 @@
   </head>
 
   <body>
-    <p><strong>This is the top of application.html.erb. Yield starts after the line.</strong></p>
-    
-    <% flash.each do |key, value| %>
-      <p><%= value %> </p>
+  <section class="section">
+      <p><strong>This is the top of application.html.erb. Yield starts after the line.</strong></p>
+      
+      <% flash.each do |key, value| %>
+    <% key == 'notice' ? key = "success" : key = "danger" %>
+    <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
+        <div class="message-body is-borderless">
+        
+            <%= value %>
+            <button class="delete" aria-label="delete" id="deleteFlashMessage"></button>
+        </div>
+    </div>
     <% end %>
-    <hr/>
-    
-    <%= yield %>
-    
-  </body>
+      <hr/>
+      
+      <%= yield %>
+</section>
 </html>

@@ -23,9 +23,16 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:id])
   end
 
   def update
+    @category = Category.find(params[:id])
+    if @category.update_attributes(permit_params)
+      redirect_to categories_path, :notice => "The category was updated"
+    else
+      render "edit", :notice => "Your category WAS NOT updated"
+    end
   end
 
   def destroy

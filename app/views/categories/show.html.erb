@@ -9,5 +9,6 @@
         <% end %>
     </ul>
 <% end %>
-<p><%= link_to "Delete #{ @category.name }", @category, data: { confirm: "Delete the whole category? Are you sure?" }, :method => :delete %> </p>
+<br/>
+<p> <%= link_to "Edit #{@category.name}", edit_category_path %> | <%= link_to "Delete #{ @category.name }", @category, data: { confirm: "Delete the whole category? Are you sure?" }, :method => :delete %> </p>
 <p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>

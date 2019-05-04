@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(permitted_params)
+    @category = Category.new(permit_params)
     if @category.save
       redirect_to categories_path, :notice => "You just created a new category"
     else
@@ -29,11 +29,21 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
+    @category = Category.find(params[:id])
+    if @category.posts.empty?
+      @category.destroy      
+    else
+      @category.posts.each do |cp|
+        cp.destroy
+      end
+      @category.destroy
+    end
+    redirect_to categories_path, :notice => "Your category and all of its associated posts have been deleted"       
   end
   
   private
 
-  def permitted_params
+  def permit_params
     params.require(:category).permit(:name)
   end
 end

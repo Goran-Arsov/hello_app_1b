@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(permitted_params)
+    @post = Post.new(permit_params)
     if @post.save
       redirect_to root_path, :notice => "Your post was saved"
     else
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(permitted_params)
+    if @post.update_attributes(permit_params)
       redirect_to post_path, :notice => "Your post was updated"
     else
       render "edit", :notice => "Your post WAS NOT updated"
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   
   private 
 
-    def permitted_params
+    def permit_params
       params.require(:post).permit(:title, :body, :category_id)
     end
 end

@@ -1,2 +1,13 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<p>Categories#edit: Find me in app/views/categories/edit.html.erb</p>
+<br/>
+<h1>Edit category</h1>
+<%= form_for @category do |c|%>
+    <p>
+        <%= c.label :name %> <br/>
+        <%= c.text_field :name %> <br/>
+    </p>
+    <p>
+        <%= c.submit "Edit Category"%>
+    </p>
+<% end %>
+<p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>

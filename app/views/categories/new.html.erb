@@ -1,13 +1,14 @@
-<p>Categories#new: find me in app/views/categories/new.html.erb</p>
-<br/>
-<h1>Make a new category</h1>
-<%= form_for @category do |c|%>
-    <p>
-        <%= c.label :name %> <br/>
-        <%= c.text_field :name %> <br/>
-    </p>
-    <p>
-        <%= c.submit "Create Category"%>
-    </p>
-<% end %>
-<p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>
+<div class="container">
+    <h1><strong>Create a new category</strong></h1>
+    <br/>
+    <%= form_for @category do |c|%>
+        <p>
+            <%= c.label :name %> <br/>
+            <%= c.text_field :name %> <br/>
+        </p>
+        <p>
+            <%= c.submit "Create Category"%>
+        </p>
+    <% end %>
+    
+</div>

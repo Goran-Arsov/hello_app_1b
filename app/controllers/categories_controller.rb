@@ -37,14 +37,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-    if @category.posts.empty?
-      @category.destroy      
-    else
-      @category.posts.each do |cp|
-        cp.destroy
-      end
-      @category.destroy
-    end
+    @category.destroy      
     redirect_to categories_path, :notice => "Your category and all of its associated posts have been deleted"       
   end
   

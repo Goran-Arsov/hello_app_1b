@@ -1,10 +1,14 @@
-    <p>Posts#index, find me in app/views/posts/index.html.erb</p>
-    <h3>List of all posts:</h3>
+<div class="container">
+    <h2><strong>Listing all posts:</strong></h2>
+    <br/>
     <ul>
     <% @posts.each do |p| %>
         <li><p><%= link_to p.title, p %></p>
         <p><%= p.body %></p></li>
     <% end %>
     </ul>
-        <hr/>
-    <p><h3><strong><%= link_to "Create new post", new_post_path %></strong></h3></p>
+    <hr/>
+    <button class="button is-medium is-transparent has-text-weight-bold">
+        <%= link_to "Create new post", new_post_path %>
+    </button>
+</div>

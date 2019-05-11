@@ -1,9 +1,14 @@
-<p>Categories#index, find me in app/views/categories/index.html.erb</p>
-<h3>List of all categories:</h3>
-<ul>
-<% @categories.each do |cat| %>
-    <li><%= link_to cat.name, cat%></li>
-<% end %>
-</ul>
-<hr/>
-<p><h3><strong><%= link_to "Create new category", new_category_path %></strong></h3></p>
+<div class="container">
+
+    <h3><strong>Listing all categories:</strong></h3>
+    <br/>
+    <ul>
+    <% @categories.each do |cat| %>
+        <li><%= link_to cat.name, cat%></li>
+    <% end %>
+    </ul>
+    <hr/>
+    <button class="button is-medium is-transparent has-text-weight-bold">
+        <%= link_to "Create new category", new_category_path %></p>
+    </button>
+</div>

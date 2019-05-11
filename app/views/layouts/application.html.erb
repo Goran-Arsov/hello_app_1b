@@ -9,10 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <section class="section">
-      <p><strong>This is the top of application.html.erb. Yield starts after the line.</strong></p>
-        
+  <body>       
+
       <% flash.each do |key, value| %>
       <% key == 'notice' ? key = "success" : key = "danger" %>
       <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
@@ -22,9 +20,12 @@
         </div>
       </div>
       <% end %>
-      <hr/>
-        
-      <%= yield %>
-    </section>
+
+      <%= render "layouts/header" %>
+
+      <main>
+        <%= yield %>
+      </main>
+
   </body>
 </html>

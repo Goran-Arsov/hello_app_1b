@@ -1,6 +1,7 @@
 <div class="container">
 
-    <h1>Make a new post</h1>
+    <h1><strong>Create a new post</strong></h1>
+    <br/>
     <%= form_for @post do |f| %>
         <p>
             <%= f.label :title %> <br/>
@@ -18,8 +19,6 @@
         <p>
             <%= f.submit "Create Post" %>
         </p>
-
     <% end %>
-    <br/>
-    <p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>
+    
 </div>

@@ -1,6 +1,6 @@
 <div class="container">
+    <h1><strong>Edit category</strong></h1>
     <br/>
-    <h1>Edit category</h1>
     <%= form_for @category do |c|%>
         <p>
             <%= c.label :name %> <br/>
@@ -10,5 +10,5 @@
             <%= c.submit "Edit Category"%>
         </p>
     <% end %>
-    <p><%= link_to "Go To All Categories", categories_path %> | <%= link_to "Go To All Posts", posts_path %></p>
+    
 </div>

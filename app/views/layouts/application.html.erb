@@ -10,7 +10,7 @@
   </head>
 
   <body>       
-
+  <section class="section">
       <% flash.each do |key, value| %>
       <% key == 'notice' ? key = "success" : key = "danger" %>
       <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
@@ -27,6 +27,6 @@
       <main>
         <%= yield %>
       </main>
-
+</section>
   </body>
 </html>

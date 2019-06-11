@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
-@import 'bulma';
 
-section { margin: 0px; }
+ $section-padding: 0.5rem 0.5rem;
+
+@import 'bulma';

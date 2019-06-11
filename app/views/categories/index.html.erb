@@ -2,13 +2,18 @@
 
     <h3><strong>Listing all categories:</strong></h3>
     <br/>
-    <ul>
-    <% @categories.each do |cat| %>
-        <li><%= link_to cat.name, cat%></li>
-    <% end %>
-    </ul>
-    <hr/>
+     <!-- With columns, no groups needed -->
+    <div class="columns is-multiline">
+        <% @categories.each do |cat| %>
+            <div class="column is-one-third">
+                <article class="notification is-success">
+                    <p><%= link_to cat.name, cat %></p>
+                </article>
+            </div>
+        <% end %>
+    </div>
+ 
     <button class="button is-medium is-transparent has-text-weight-bold">
         <%= link_to "Create new category", new_category_path %></p>
     </button>
-</div>
+</div> 

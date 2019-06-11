@@ -1,20 +1,20 @@
 <div class="container">
 <h2><strong>Listing all posts:</strong></h2><br/>
 
-
-        <% @posts.each do |p| %>
+    <!-- With tiles, must be done in groups -->
+    <% @posts.in_groups_of(3, false) do |posts| %>
         <div class="tile is-ancestor">
-    <div class="tile is-12">
-            <div class="tile is-parent is-4">
-                <article class="tile is-child notification is-success">
-                    <p><%= link_to p.title, p %></p>
-                    <p><%= p.body %></p>
-                </article>
-            </div>
-        <% end %>
-    </div>
-    <hr/>
-</div>
+            <% posts.each do |post| %>
+                <div class="tile is-parent is-horizontal is-4">
+                    <article class="tile is-child notification is-success">
+                        <p><%= link_to post.title, post %></p>
+                        <p><%= post.body %></p>
+                    </article>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+
 <button class="button is-medium is-transparent has-text-weight-bold">
     <%= link_to "Create new post", new_post_path %>
 </button>

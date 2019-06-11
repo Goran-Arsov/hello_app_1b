@@ -1,14 +1,20 @@
 <div class="container">
-    <h2><strong>Listing all posts:</strong></h2>
-    <br/>
-    <ul>
+<h2><strong>Listing all posts:</strong></h2>
+<br/>
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-12">
+    <%# <ul> %>
     <% @posts.each do |p| %>
-        <li><p><%= link_to p.title, p %></p>
-        <p><%= p.body %></p></li>
+    <div class="tile is-child is-4">
+        <p><%= link_to p.title, p %></p>
+        <p><%= p.body %></p>
+    </div>
     <% end %>
-    </ul>
+    <%# </ul> %>
+    </div>
     <hr/>
-    <button class="button is-medium is-transparent has-text-weight-bold">
-        <%= link_to "Create new post", new_post_path %>
-    </button>
+</div>
+<button class="button is-medium is-transparent has-text-weight-bold">
+    <%= link_to "Create new post", new_post_path %>
+</button>
 </div>

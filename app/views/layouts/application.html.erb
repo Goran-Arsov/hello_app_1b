@@ -4,7 +4,6 @@
     <title>RailsApp1b</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,21 +11,20 @@
   <body>       
   <section class="section">
       <% flash.each do |key, value| %>
-      <% key == 'notice' ? key = "success" : key = "danger" %>
-      <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
-        <div class="message-body is-borderless">       
-          <%= value %>
-          <button class="delete" aria-label="delete" id="deleteFlashMessage"></button>
-        </div>
-      </div>
+        <% key == 'notice' ? key = "success" : key = "danger" %>
+          <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
+            <div class="message-body is-borderless">       
+            <%= value %>
+            <button class="delete" aria-label="delete" id="deleteFlashMessage"></button>
+            </div>
+          </div>
       <% end %>
 
-      <%= render "layouts/header" %>
-      <br/>
+    <%= render "layouts/header" %><br/>
       
-      <main>
-        <%= yield %>
-      </main>
-</section>
+    <main>
+      <%= yield %>
+    </main>
+  </section>
   </body>
 </html>

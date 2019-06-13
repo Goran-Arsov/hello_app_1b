@@ -1,7 +1,7 @@
-<section class="section">
+<div class="container">
 
     <h3><strong>Listing all categories:</strong></h3><br/>
-    
+
      <!-- With columns, no groups needed -->
     <div class="columns is-multiline">
         <% @categories.each do |cat| %>
@@ -14,7 +14,7 @@
     </div>
  
     <button class="button is-medium is-transparent has-text-weight-bold">
-        <%= link_to "Create new category", new_category_path %></p>
+        <%= link_to "Create new category", new_category_path %>
     </button>
 
-</section> 
+</div> 

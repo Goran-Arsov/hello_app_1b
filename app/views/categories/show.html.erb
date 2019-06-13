@@ -1,4 +1,4 @@
-<section class="section">
+<div class="container">
 
     <p><strong>All existing posts in "<%= @category.name %>"</strong>:</p>
     <% if @category_posts.empty? %>
@@ -13,4 +13,4 @@
     <br/>
     <p> <%= link_to "Edit #{@category.name}", edit_category_path %> | <%= link_to "Delete #{ @category.name }", @category, data: { confirm: "Delete the whole category? Are you sure?" }, :method => :delete %> </p>
     
-</section>
+</div>

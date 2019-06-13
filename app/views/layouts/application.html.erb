@@ -19,15 +19,23 @@
         </div>
     <% end %>
 
-  <section>
+  <%# <section> %>
     <%= render "layouts/header" %><br/>
       
-    <main>
-      <%= yield %>
+    <main class="container">
+      <div class="columns">
+        <div class="column is-3">
+          <%= render "layouts/aside_left"%>
+        </div>
+
+        <div class="column is-9">
+          <%= yield %>
+        </div>
+      </div>
     </main>
 
     <%= render "layouts/footer" %>
-  </section>
+  <%# </section> %>
 
   </body>
 </html>

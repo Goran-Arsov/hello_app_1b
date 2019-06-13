@@ -1,13 +1,12 @@
-<section class="section">
+<div class="container">
     <div class="container">
-        <h2><strong><%= @post.title %></strong></h1>
-    
+        <h2><strong><%= @post.title %></strong></h1>    
         <p><small><%= @post.created_at.strftime("%b %d, %Y") %></small></p><br />
     </div>
     <div class="container">
-    <p><%= @post.body %></p><br />
-    <p><%= @post.title %> category: <%= link_to @post.category.name, category_path(:id  => @post.category.id) %></p><br />
+        <p><%= @post.body %></p><br />
+        <p><%= @post.title %> category: <%= link_to @post.category.name, category_path(:id  => @post.category.id) %></p><br />
     </div>
     <p><%= link_to "Edit Post", edit_post_path %> | <%= link_to "Delete Post", @post, data: { confirm: 'Delete? Are you sure?' }, :method => :delete %></p>
     
-</section>
+</div>

@@ -1,27 +1,25 @@
 <div class="container">
+
     <h2><strong>Listing all posts:</strong></h2><br/>
 
     <!-- With tiles, must be done in groups -->
     <% @posts.in_groups_of(3, false) do |posts| %>
         <div class="tile is-ancestor">
             <% posts.each do |post| %>
-                <div class="tile is-parent is-horizontal is-3">
+                <div class="tile is-parent is-horizontal">
                     <article class="tile is-child notification is-success">
                         <p><%= link_to post.title, post %></p>
                         <p><%= post.body %></p>
                     </article>
                 </div>
             <% end %>
-        </div>
+        </div>        
     <% end %>
 
     <button class="button is-medium is-transparent has-text-weight-bold">
         <%= link_to "Create new post", new_post_path %>
-    </button>
-</div>
+    </button> <br /> <br /> 
 
-<div class="columns">
-<div class="column is-12">
     <!-- content -->
     <div class="content">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -31,7 +29,7 @@
     </div>
 
     <!-- Headings -->
-    <div class="block">
+    <div class="container">
         <h1 class="title">Hello World<h1>
         <h2 class="subtitle">Subtitle<h2>
     </div>
@@ -56,7 +54,7 @@
     <div style="margin-top:100px"></div>
 
     <!-- button -->
-    <div class="block">
+    <div class="container">
         <button>classless</button>
         <button class="button">class="button"</button>
         <button class="button is-info">is-info</button>
@@ -66,7 +64,7 @@
         <button class="button is-danger">is-danger</button>
     </div>
 
-    <div class="block">
+    <div class="container">
         <button>classless</button>
         <button class="button is-outlined">class="button"</button>
         <button class="button is-hovered">is-hovered</button>
@@ -76,7 +74,7 @@
         <button class="button" disabled>disabled</button>        
     </div>
 
-    <div class="block">
+    <div class="container">
         <button>classless</button>
         <button class="button">class="button"</button>
         <button class="button is-link">is-link</button>
@@ -86,7 +84,7 @@
         <button class="button is-black is-large">is-black</button>
     </div>
 
-    <div class="block">
+    <div class="container">
         <p>is-inverted</p>
         <button>classless</button>
         <button class="button is-inverted">class="button"</button>
@@ -97,7 +95,7 @@
         <button class="button is-inverted is-black is-large">is-black</button>
     </div>
 
-    <div class="block">
+    <div class="container">
         <p>is-outlined</p>
         <button>classless</button>
         <button class="button is-outlined">class="button"</button>
@@ -108,7 +106,7 @@
         <button class="button is-outlined is-black is-large">is-black</button>
     </div>
 
-    <div class="block">
+    <div class="container">
         <p>tags</p>
         <span>classless span</span>
         <span class="tag">class="tag"</span>        
@@ -123,11 +121,11 @@
         <span class="tag is-warning is-medium">is-warning <button class="delete"></button></span>
         <span class="tag is-danger is-large">is-danger</span>
     </div>
-    
+
     <div style="margin-top:50px"></div>
 
     <!-- box -->
-    <div class="block">
+    <div class="container">
         <div class="box">
             <h2 class="title is-4">box</h2>
             <p><button class="delete"></button>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>            
@@ -135,42 +133,42 @@
     </div>
 
     <!-- notification -->
-    <div class="block">
+    <div class="container">
         <div class="notification">
             <h2 class="title is-4">notification</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button></p>
         </div>
     </div>
-    
-    <div class="block">
+
+    <div class="container">
         <div class="notification is-primary">
             <h2 class="title is-4">notification</h2>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button>
         </div>
     </div>
 
-    <div class="block">
+    <div class="container">
         <div class="notification is-info">
             <h2 class="title is-4">notification</h2>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button>
         </div>
     </div>
 
-    <div class="block">
+    <div class="container">
         <div class="notification is-success">
             <h2 class="title is-4">notification</h2>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button>
         </div>
     </div>
 
-    <div class="block">
+    <div class="container">
         <div class="notification is-warning">
             <h2 class="title is-4">notification</h2>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button>
         </div>
     </div>
 
-    <div class="block">
+    <div class="container">
         <div class="notification is-danger">
             <h2 class="title is-4">notification</h2>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button>
@@ -178,7 +176,7 @@
     </div>
 
     <!-- message -->
-    <div class="block">
+    <div class="container">
         <article class="message">
             <div class="message-header">
                 message <button class="delete"></button>
@@ -187,7 +185,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </div>
         </article>
-    
+
         <article class="message is-primary">
             <div class="message-header">
                 message <button class="delete"></button>
@@ -336,7 +334,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="hero is-info">
         <div class="hero-body">
             <div class="container">
@@ -374,20 +372,20 @@
     </section>
 
     <!-- card 1 -->
-        <div class="card">
-            <div class="card-content">
-                <p class="subtitle is-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button></p>
-            </div>
+    <div class="card">
+        <div class="card-content">
+            <p class="subtitle is-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<button class="delete"></button></p>
+        </div>
 
-            <div class="card-footer">
-                <div class="card-footer-item">
-                    <p>card footer</p>
-                </div>
-                <div class="card-footer-item">
-                    <p>card footer</p>
-                </div>
+        <div class="card-footer">
+            <div class="card-footer-item">
+                <p>card footer</p>
+            </div>
+            <div class="card-footer-item">
+                <p>card footer</p>
             </div>
         </div>
+    </div>
 
     <!-- card 2 -->
     <div class="card">
@@ -398,156 +396,156 @@
         </div>
         <div class="card-content">
             <div class="media">
-            <div class="media-left">
-                <figure class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
-            </div>
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">John Smith</p>
+                    <p class="subtitle is-6">@johnsmith</p>
+                </div>
             </div>
 
             <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
-            <br>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
 
             <footer class="card-footer">
                 <a href="#" class="card-footer-item">Save</a>
                 <a href="#" class="card-footer-item">Edit</a>
                 <a href="#" class="card-footer-item">Delete</a>
-        </footer>
+            </footer>
         </div>
     </div>
 
-        <!-- pagination -->
-        <div class="container">
-            <nav class="pagination">
-                <a href="" class="pagination-previous" disabled>Previous</a>
-                <a href="" class="pagination-next">Next page</a>
-                <ul class="pagination-list">
-                    <li><a href="" class="pagination-link is-current">1</a></li>
-                    <li><a href="" class="pagination-link">2</a></li>
-                    <li><a href="" class="pagination-link">3</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- content -->
-        <div class="container">
-            <form>
-                <div class="field">
-                    <label class="label">Label</label>
-                    <input type="text" class="input" Placeholder="Enter text">
-                </div>
-            </form>
-
-            <form>
-                <div class="field">
-                    <label class="label">Label</label>
-                    <input type="text" class="input is-success" Placeholder="Enter text">
-                </div>
-            </form>
-
-            <form>
-                <div class="field">
-                    <label class="label">Label</label>
-                    <input type="text" class="input is-danger" Placeholder="Enter text">
-                </div>
-            </form>
-        </div>
-
-        <!-- drop-down -->
-        <div class="container">
-            <form>
-                <div class="field">
-                    <label class="label">Drop-down</label>  
-                    <p class="control">
-                        <span class="select">
-                            <select>
-                                <option>First line</option>
-                                <option>Second line</option>
-                                <option>3rd line</option>
-                                <option>4th line</option>
-                            </select>
-                        </span>
-                    </p>      
-                </div>
-            </form>
-        </div>
-
-        <!-- text area -->
-        <div class="container">
-            <form>
-                <div class="field">
-                    <label class="label">Text area</label>  
-                    <p class="control">
-                        <textarea class="text-area" Placeholder="text"></textarea>
-                    </p>      
-                </div>
-            </form>
-        </div>
-
-        <!-- text area with adons -->
-        <div class="container">
-            <label class="label">Text area with adons</label>
-            <div class="field has-adons is-horizontal">
-
-                <div class="control">
-                    <span class="select">
-                        <select>
-                            <option>$</option>
-                            <option>#</option>
-                        </select>
-                    </span>
-                </div>
-
-                <div class="control">
-                    <input class="input" type="text" Placeholder="Amount">
-                </div>
-
-                <div class="control">
-                    <a href="" class="button is-info">Pay</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="field has-addons">
-                <div class="control">
-                    <span class="select">
-                        <select>
-                            <option>$</option>
-                            <option>#</option>
-                        </select>
-                    </span>
-                </div>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Find a repository">
-                </div>
-                <div class="control">
-                    <a class="button is-info">Search</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- columns -->
-        <%# <div class="container"> %>
-            <div class="columns">
-                <div class="column is-2">
-                    <p class="notification is-info">is-2</p>            
-                </div>
-                <div class="column is-6">
-                    <p class="notification is-warning">is-6</p>
-                </div>
-                <div class="column">
-                    <p class="notification is-success">Auto</p>
-                </div>
-            </div>
+    <!-- pagination -->
+    <div class="container">
+        <nav class="pagination">
+            <a href="" class="pagination-previous" disabled>Previous</a>
+            <a href="" class="pagination-next">Next page</a>
+            <ul class="pagination-list">
+                <li><a href="" class="pagination-link is-current">1</a></li>
+                <li><a href="" class="pagination-link">2</a></li>
+                <li><a href="" class="pagination-link">3</a></li>
+            </ul>
+        </nav>
     </div>
-</div></div>
+
+    <!-- content -->
+    <div class="container">
+        <form>
+            <div class="field">
+                <label class="label">Label</label>
+                <input type="text" class="input" Placeholder="Enter text">
+            </div>
+        </form>
+
+        <form>
+            <div class="field">
+                <label class="label">Label</label>
+                <input type="text" class="input is-success" Placeholder="Enter text">
+            </div>
+        </form>
+
+        <form>
+            <div class="field">
+                <label class="label">Label</label>
+                <input type="text" class="input is-danger" Placeholder="Enter text">
+            </div>
+        </form>
+    </div>
+
+    <!-- drop-down -->
+    <div class="container">
+        <form>
+            <div class="field">
+                <label class="label">Drop-down</label>  
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>First line</option>
+                            <option>Second line</option>
+                            <option>3rd line</option>
+                            <option>4th line</option>
+                        </select>
+                    </span>
+                </p>      
+            </div>
+        </form>
+    </div>
+
+    <!-- text area -->
+    <div class="container">
+        <form>
+            <div class="field">
+                <label class="label">Text area</label>  
+                <p class="control">
+                    <textarea class="text-area" Placeholder="text"></textarea>
+                </p>      
+            </div>
+        </form>
+    </div>
+
+    <!-- text area with adons -->
+    <div class="container">
+        <label class="label">Text area with adons</label>
+        <div class="field has-adons is-horizontal">
+
+            <div class="control">
+                <span class="select">
+                    <select>
+                        <option>$</option>
+                        <option>#</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="control">
+                <input class="input" type="text" Placeholder="Amount">
+            </div>
+
+            <div class="control">
+                <a href="" class="button is-info">Pay</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="field has-addons">
+            <div class="control">
+                <span class="select">
+                    <select>
+                        <option>$</option>
+                        <option>#</option>
+                    </select>
+                </span>
+            </div>
+            <div class="control">
+                <input class="input" type="text" placeholder="Find a repository">
+            </div>
+            <div class="control">
+                <a class="button is-info">Search</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- columns -->
+    <div class="container">
+        <div class="columns">
+            <div class="column is-2">
+                <p class="notification is-info">is-2</p>            
+            </div>
+            <div class="column is-6">
+                <p class="notification is-warning">is-6</p>
+            </div>
+            <div class="column">
+                <p class="notification is-success">Auto</p>
+            </div>
+        </div>
+    </div>
+</div>

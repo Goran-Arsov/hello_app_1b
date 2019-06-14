@@ -12,10 +12,16 @@
  *
  */
 
-$section-padding: 1rem 1rem;
+$section-padding: 0.5rem 0.5rem;
 
 @import 'bulma';
 
-.container { padding: 2px 2px; }
-/*footer { margin-bottom: 2px; }*/
-aside {float: left;}
+.container { padding: 2px 0px; }
+
+body {display: box;}
+aside { float: left; }
+
+.footer {
+    margin: 0px;
+    padding: 0px; 
+    clear: both;}

@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path, :notice => "Your post was saved"
     else
-      render "new", :notice => "Your post WAS NOT saved"
+      render "new", :alert => "Your post WAS NOT saved"
     end
   end
 
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, :notice => 'Your post has been deleted.'
+    redirect_to posts_path, :alert => 'Your post has been deleted.'
   end
   
   private 

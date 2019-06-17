@@ -1,22 +1,18 @@
-<section class="section">
-    <div class="container">
+<div class="container column is-12">
+    <h3><strong>Listing the most recent 12 categories:</strong></h3><br/>
 
-        <h3><strong>Listing the most recent 12 categories:</strong></h3><br/>
+    <!-- With columns, no groups needed -->
+    <div class="columns is-multiline">
+        <% @categories.last(12).each do |cat| %>
+            <div class="column is-one-third">
+                <article class="notification is-info">
+                    <p class="has-text-centered"><%= link_to cat.name, cat %></p>
+                </article>
+            </div>
+        <% end %>
+    </div>
 
-        <!-- With columns, no groups needed -->
-        <div class="columns is-multiline">
-            <% @categories.last(12).each do |cat| %>
-                <div class="column is-one-third">
-                    <article class="notification is-info">
-                        <p class="has-text-centered"><%= link_to cat.name, cat %></p>
-                    </article>
-                </div>
-            <% end %>
-        </div>
-    
-        <button class="button is-medium is-transparent has-text-weight-bold">
-            <%= link_to "Create new category", new_category_path %>
-        </button>
-
-    </div> 
-</section>
+    <button class="button is-medium is-transparent has-text-weight-bold">
+        <%= link_to "Create new category", new_category_path %>
+    </button>
+</div> 

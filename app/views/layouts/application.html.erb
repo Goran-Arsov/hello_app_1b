@@ -9,20 +9,11 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <% key == 'notice' ? key = "success" : key = "danger" %>
-        <div class="message is-<%= key %> has-text-centered is-marginless" id="flashMessage">
-          <div class="message-body is-borderless">       
-          <%= value %>
-          <button class="delete" aria-label="delete" id="deleteFlashMessage"></button>
-          </div>
-        </div>
-    <% end %>
+    <%= render 'layouts/notices_alerts' %>
 
     <section class="section">
       <%= render "layouts/header" %><br/>
     </section>
-
     
     <section class="section">
       <div class="container">
@@ -41,8 +32,7 @@
         </div>
       </div>
     </section>
-    
-    
+      
     <section class="section">
       <%= render "layouts/footer" %>
     </section>

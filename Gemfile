@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 gem 'bulma-rails', '~> 0.7.4'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

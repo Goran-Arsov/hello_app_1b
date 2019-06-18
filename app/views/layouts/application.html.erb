@@ -23,23 +23,25 @@
       <%= render "layouts/header" %><br/>
     </section>
 
-    <main>
-      <div class="section">
-        <div class="container">
-          <div class="columns">
+    
+    <section class="section">
+      <div class="container">
+        <div class="columns">
 
-            <div class="column is-2">
-              <%= render "layouts/aside_left" %>
-            </div>
-
-            <div class="column is-10">
-              <%= yield %>
-            </div>
-
+          <div class="column is-2">
+            <%= render "layouts/aside_left" %>
           </div>
+                      
+          <div class="column is-10">
+            <main>
+              <%= yield %>
+            </main>
+          </div>
+          
         </div>
       </div>
-    </main>
+    </section>
+    
     
     <section class="section">
       <%= render "layouts/footer" %>
